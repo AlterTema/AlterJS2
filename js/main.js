@@ -22,7 +22,7 @@ const renderProducts = (list) => {
     });
 
     console.log(productList);
-    document.querySelector('.products').innerHTML = productList;
+    document.querySelector('.products').innerHTML = productList.join('');
 }
 
 renderProducts(products);
