@@ -10,6 +10,9 @@
 .header {
   height: 100px;
   background-color: #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .footer {
   background-color: darkgray;
@@ -20,16 +23,25 @@
   height: 80px;
 }
 .btn-cart {
-  position: absolute;
-  right: 62px;
-  top: 37px;
+  font-weight: bold;
+  padding: 8px;
+  font-family: Noto sans-serif;
+}
+.shop {
+  font-weight: bold;
 }
 .products {
   margin-top: 60px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+  text-align: center;
+  padding-left: 157px;
+  padding-right: 157px;
+  padding-top: 49px;
 }
 .imgHeight {
   height: 81px;
+}
+body {
+  font-family: Noto sans-serif;
 }
