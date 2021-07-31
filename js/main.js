@@ -1,10 +1,10 @@
 'use strict';
 
 const products = [
-    { id: 1, title: 'Notebook', price: 1000 },
-    { id: 2, title: 'Mouse', price: 100 },
-    { id: 3, title: 'Keyboard', price: 250 },
-    { id: 4, title: 'Gamepad', price: 150 },
+    { title: 'Notebook', price: 1000 },
+    { title: 'Mouse', price: 100 },
+    { title: 'Keyboard', price: 250 },
+    { title: 'Gamepad', price: 150 },
 ];
 
 const renderProduct = (item, img = 'https://megabo.ru/image/cache/catalog/photo/coming-soon-1000x1000.png') =>
@@ -16,9 +16,13 @@ const renderProduct = (item, img = 'https://megabo.ru/image/cache/catalog/photo/
               </div>`;
 
 
-const renderProducts = list => {
+const renderProductList = (list)  => {
+    let ProductList = list.map(item => renderProduct(item.title, item.price));
     document.querySelector('.products').insertAdjacentHTML('beforeend', list.map(item => renderProduct(item)).join(''));
 };
 
-renderProducts(products);
+renderProductList(products);
+
+
+
 
