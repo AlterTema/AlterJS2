@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HAMBURGER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hamburgerbox">
+        <form name="" action="" id="form">
+
+            <p class="generaltext">Создай свой гамбургер</p>
+            <div class="size">Размер бургера:</div>
+            <div class="sizes">
+                <input type="radio" name="size" id="small" value="small" checked/>
+                <label for="small">Маленький</label>
+            </div>
+            <div class="sizes">
+                <input type="radio" name="size" id="big" value="big" checked/>
+                <label for="big">Большой</label>
+            </div>
+
+            <p class="addtext">Начинка:</p>
+            <div class="add">
+                <input type="checkbox" name="add" id='cheese' value="cheese" />
+                <label for="cheese">Сыр</label>
+            </div>
+            <div class="add">
+                <input type="checkbox" name="add" id='salad' value="salad" />
+                <label for="salad">Салат</label>
+            </div>
+            <div class="add">
+                <input type="checkbox" name="add" id='potato' value="potato" />
+                <label for="potato">Картофель</label>
+            </div>
+            <div class="add">
+                <input type="checkbox" name="add" id='herb' value="herb" />
+                <label for="herb">Пряности</label>
+            </div>
+            <div class="add">
+                <input type="checkbox" name="add" id='mayonnaise' value="mayonnaise" />
+                <label for="mayonnaise">Майонез</label>
+            </div>
+
+            <br/>
+            <div class="submit">
+                <input type="submit" value="Сделать заказ" />
+            </div>
+            <div id="result">
+                <div><b>Стоимость:</b> <span id="price">0</span> рублей</div>
+                <div><b>Калорийность:</b> <span id="calories">0</span> калорий</div>
+            </div>
+
+        </form>
+    </div>
+
+<script src="./js/hamburgerJS.JS"></script>
+</body>
+
+</html>
