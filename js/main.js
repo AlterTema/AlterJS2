@@ -1,4 +1,4 @@
-'use strict';
+const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 const products = [
     { title: 'Notebook', price: 1000 },
@@ -23,28 +23,3 @@ const renderProductList = (list)  => {
 
 renderProductList(products);
 
-
-
-addProduct (element)
-    this.getJSON(`${API}/addToBasket.json`)
-    .then(dataa => {
-        if (data.result === 1){
-            let productID = +element.dataset['id'];
-            let find = this.allProducts.find(product => product.id_product === productID);
-            if(find){
-                find.quantity++;
-                this._updateCart(find);
-            }else{
-                let product = {
-                    id_product: productId,
-                    price: +element.dataset['price'],
-                    product_name: element.dataset['name'],
-                    quantity:1
-                };
-                this.goods = [product];
-                this.render();
-            }
-        } else {
-            alert('Error');
-        }
-    })
