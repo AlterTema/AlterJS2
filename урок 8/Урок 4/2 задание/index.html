@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="user_info"> <form action="#" class=user_data id="myform">
+        <div class="user_name">
+            <label><p class="name_list">ФИО</p>
+                <br>
+                <input type="text" name="name" id='name'>
+            </label>
+        </div>
+        <div class="user_phone">
+            <label><p class="name_list">Номер телефона</p>
+                <br>
+                <input type="text" name="phone" id='phone'>
+            </label>
+        </div>
+        <div class="user_mail">
+            <label><p class="name_list">Почта</p>
+                <br>
+                <input type="text" name="mail" id='mail'>
+            </label>
+        </div>
+        <button class=user_button>Отправить</button>
+    </form></div>
+    <script src="check_box.js"></script>
+    <script>
+    window.onload = () => {
+        document.getElementById('myform').addEventListener('submit', e => {
+            const valid = new Validator('myform');
+            if(!valid.valid){
+                e.preventDefault();
+            }
+        })
+    }
+</script>
+</body>
+
+</html>
